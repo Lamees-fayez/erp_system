@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load django_bootstrap5 %}
+{% block body %}
+<div class="container mx-auto mt-5">
+    <h3>Employee system</h3></div>
+<form class="container mt-5" method="post">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+         
+
+    <button href="{% url 'home' %}" type="submit" class="btn btn-success">Save</button>
+    
+
+
+
+</form>
+
+{% endblock body %}

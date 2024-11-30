@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block body %}
+<div class="container mx-auto mt-5">
+    <h3>Employee system</h3>
+<div class="row mt-5">
+<h3>name : {{employee.name}}</h3>
+</div>
+<div class="row mt-5">
+    <h3>age :{{employee.age}}</h3>
+    </div>
+    <div class="row mt-5">
+        <h3>salary : {{employee.salary}}</h3>
+        </div>
+        
+        <img src = "{{employee.image.url}}" alt=""/>
+         
+    <div class="row mt-5">
+    <a href="{% url 'update' employee.id %}"type="button" class="btn btn-info">Update Employee</a>
+    <div class="row mt-5">
+    <a href="{% url 'delete' employee.id %}"type="button" class="btn btn-danger">Delete Employee</a>
+    <div class="row mt-5">
+    <a href="/"  class="btn btn-warning">Return to home</a>
+</div>
+</div>
+</div>
+</div>
+
+{% endblock body %}
